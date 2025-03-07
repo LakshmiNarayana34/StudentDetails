@@ -14,7 +14,7 @@ namespace StudentDetails.Data
         protected override void OnModelCreating(ModelBuilder modelbuilder)
         {
            var departmentData = new List<DepartmentData>
-            {
+            {//test
                     new DepartmentData()
                     {
                         StudentDepartmentId = 100,
