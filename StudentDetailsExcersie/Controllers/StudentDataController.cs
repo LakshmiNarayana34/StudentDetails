@@ -9,8 +9,8 @@ using StudentDetailsExcersie.Dtos.ErrorResponse;
 
 namespace StudentDetailsExcersie.Controllers
 {
-    [Route("api/[controller]")]////
-    [ApiController]///
+    [Route("api/[controller]")]
+    [ApiController]
     public class StudentDataController : ControllerBase
     {
         //   private readonly StudentContext _studentContext;
