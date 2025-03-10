@@ -42,7 +42,7 @@ namespace StudentDetailsExcersie
 
             app.MapControllers();
 
-            app.Run();
+            app.Run();//////
         }
     }
 }
