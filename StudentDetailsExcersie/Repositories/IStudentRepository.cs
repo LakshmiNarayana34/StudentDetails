@@ -8,5 +8,7 @@ namespace StudentDetailsExcersie.Repositories
         Task<Student?>GetById(int id);
         Task<Student> CreateStudent(Student student);
         Task<Student> UpdateStudent(int id,Student student);
+
+        Task<Student> GetByIdAndName(int id,string name);
     }
 }

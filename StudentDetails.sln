@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyApp.xUnitTest", "MyApp.xU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StduentDetailsExcertise.TestCases", "StduentDetailsExcertise.TestCases\StduentDetailsExcertise.TestCases.csproj", "{5C597D77-F890-41E6-AEF2-DD3AD279A46F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentNUnitTest.Models", "StudentNUnitTest.Models\StudentNUnitTest.Models.csproj", "{BA579BE1-D50A-4BDC-BF0C-91DECBC4F722}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5C597D77-F890-41E6-AEF2-DD3AD279A46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C597D77-F890-41E6-AEF2-DD3AD279A46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C597D77-F890-41E6-AEF2-DD3AD279A46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA579BE1-D50A-4BDC-BF0C-91DECBC4F722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA579BE1-D50A-4BDC-BF0C-91DECBC4F722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA579BE1-D50A-4BDC-BF0C-91DECBC4F722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA579BE1-D50A-4BDC-BF0C-91DECBC4F722}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

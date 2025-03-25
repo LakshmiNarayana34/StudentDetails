@@ -232,6 +232,24 @@ namespace TestProject4.Controller
 
         }
 
+        [Fact]
+        public async Task UpdateStudentDetails_ShouldReturnBadResponse_WhenInputIsZero()
+        {
+            //Arrange
+            int id = 0;
+            var student = new Student();
+            //Response
+            var createStudentDto = new CreateStudentDataDto();
+            studentRepositoryMock.Setup(x => x.UpdateStudent(id, student)).ReturnsAsync(student);
+
+            //Act
+            var result =await studentDataController.UpdateStudentData(id, createStudentDto);
+
+            //Assert
+            result.Should().NotBeNull();
+            result.Should().BeAssignableTo<BadRequestResult>();
+        }
+
 
     }
 }

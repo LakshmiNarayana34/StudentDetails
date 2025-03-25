@@ -64,5 +64,17 @@ namespace StudentDetailsExcersie.Repositories
             await dbContext.SaveChangesAsync();
             return StudentData;
         }
+
+        public async Task<Student> GetByIdAndName(int id, string FirstName)
+        {
+          return await dbContext.Students.Include(cd => cd.ContactDetails)
+                                         .Include(bg => bg.BloodGroup)
+                                         .Include(ad => ad.Address)
+                                         .ThenInclude(ca => ca.CurrentAddress)
+                                         .Include(ad => ad.Address)
+                                         .ThenInclude(pa => pa.PermanentAddress)
+                                         .Where(x => x.StudentId == id && x.FirstName == FirstName).FirstOrDefaultAsync();
+          
+        }
     }
 }

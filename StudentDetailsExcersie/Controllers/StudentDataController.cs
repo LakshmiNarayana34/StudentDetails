@@ -124,13 +124,22 @@ namespace StudentDetailsExcersie.Controllers
         [ProducesResponseType(typeof(StudentDto),200)]
         public async Task<IActionResult> UpdateStudentData([FromQuery] int id,[FromBody] CreateStudentDataDto createStudentDataDto)
         {
-           var student = _mapper.Map<Student>(createStudentDataDto);
+            var student = _mapper.Map<Student>(createStudentDataDto);
+            if(id == 0 || id < 0)
+            {
+                return BadRequest();
+            }
            var UpdateStudentDto = await _studentRepository.UpdateStudent(id, student);
            var studentDto = _mapper.Map<StudentDto>(UpdateStudentDto);
            return Ok(studentDto);
 
         }
 
+        [HttpGet("newGetStudentMethod")]
+        public async Task<ActionResult<Student>> GetByIdAndName(int id,string name)
+        {
+            return await _studentRepository.GetByIdAndName(id, name);
+        }
 
     }
 }
